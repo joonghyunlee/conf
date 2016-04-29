@@ -10,6 +10,6 @@ export LANG="ko_KR.UTF-8"
 alias ls='ls -G'
 
 export CLICOLOR=1
-export LSCOLORS=ExGxCxGxBxegedabagaced
+export LSCOLORS=ExGxHxGxCxegedahagaced
 
 export PS="[\u \W]\$ "
