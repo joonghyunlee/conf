@@ -18,7 +18,7 @@ $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 $ sudo brew install macvim
 ...
-$ echo 'alias vim=/usr/local/bin/mvim' >> ~/.bash_profile  
+$ echo "alias vim='/usr/local/bin/mvim'" >> ~/.bash_profile  
 ```
 * compile **YCM** Plugin
 ```
