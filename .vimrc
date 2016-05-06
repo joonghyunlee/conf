@@ -16,6 +16,9 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
+" Enable short-cut for python
+map <F2> :w<Enter>:!python %<Enter>
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim  
 call vundle#begin()
