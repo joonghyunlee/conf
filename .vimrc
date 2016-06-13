@@ -6,6 +6,7 @@ set sw=4
 set expandtab
 set hlsearch
 
+set backspace=2
 set nocompatible              " required  
 filetype off                  " required
 
