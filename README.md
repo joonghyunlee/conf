@@ -31,3 +31,19 @@ $ ./install.py
 $ vim
 :PluginInstall
 ```
+
+### Remote Server
+* set a directory for plugins
+modify `.vimrc` file
+replace `/path-to-bundle/` as your plugins' directory
+```
+" set the runtime path to include Vundle and initialize
+set rtp+=/path-to-bundle/Vundle.vim  
+call vundle#rc("/path-to-bundle/")
+call vundle#begin()
+```
+
+* alias `vi` command to load this custom `vimrc` file
+```
+$ alias vim='vim -u /path-to-vimrc/.vimrc'
+```
