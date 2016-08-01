@@ -1,6 +1,14 @@
 # conf
 
 ## VIM
+### Cent OS
+* install dependent packages
+```
+$ sudo yum install automake gcc gcc-c++ kernel-devel cmake
+...
+$ sudo yum install python-devel python3-devel
+```
+
 ### Mac OS X
 * copy **.vimrc** file 
 ```
