@@ -6,6 +6,8 @@ set sw=4
 set expandtab
 set hlsearch
 
+set encoding=utf-8
+
 set backspace=2
 set nocompatible              " required  
 filetype off                  " required
@@ -20,26 +22,20 @@ nnoremap <space> za
 " Enable short-cut for python
 map <F2> :w<Enter>:!python %<Enter>
 
-" set the runtime path to include Vundle and initialize
-set rtp+=/path-to-bundle/Vundle.vim  
-call vundle#rc("/path-to-bundle/")
-call vundle#begin()
-
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'tmhedberg/SimpylFold'
-Bundle 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required  
-filetype plugin indent on    " required  
-
-let g:ycm_autoclose_preview_window_after_completion=1  
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:SimplyFold_docstring_preview=1
+let python_highlight_all=1
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 au BufNewFile,BufRead *.py  
     \ set tabstop=4 |
@@ -54,5 +50,7 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 colorscheme default
