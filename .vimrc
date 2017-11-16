@@ -22,6 +22,11 @@ nnoremap <space> za
 " Enable short-cut for python
 map <F2> :w<Enter>:!python %<Enter>
 
+" set the runtime path to include Vundle and initialize
+set rtp+=/path-to-bundle/Vundle.vim  
+call vundle#rc("/path-to-bundle/")
+call vundle#begin()
+
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
@@ -32,6 +37,10 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required  
+filetype plugin indent on    " required  
 
 let g:SimplyFold_docstring_preview=1
 let python_highlight_all=1
