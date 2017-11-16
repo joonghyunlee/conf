@@ -23,8 +23,8 @@ nnoremap <space> za
 map <F2> :w<Enter>:!python %<Enter>
 
 " set the runtime path to include Vundle and initialize
-set rtp+=/path-to-bundle/Vundle.vim  
-call vundle#rc("/path-to-bundle/")
+set rtp+=path-to-bundle/Vundle.vim  
+call vundle#rc("path-to-bundle/")
 call vundle#begin()
 
 " let Vundle manage Vundle, required
