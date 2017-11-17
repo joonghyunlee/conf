@@ -23,8 +23,8 @@ nnoremap <space> za
 map <F2> :w<Enter>:!python %<Enter>
 
 " set the runtime path to include Vundle and initialize
-set rtp+=path-to-bundle/Vundle.vim  
-call vundle#rc("path-to-bundle/")
+set rtp+=/home1/irteamsu/joonghyun.lee/conf/.vim/bundle/Vundle.vim  
+call vundle#rc("/home1/irteamsu/joonghyun.lee/conf/.vim/bundle/")
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -59,7 +59,5 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
-
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 colorscheme default
