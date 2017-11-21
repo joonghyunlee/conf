@@ -1,2 +1,3 @@
 #!/bin/sh
-alias vim='vim -u $PWD/.vimrc'
+TARGET=`cat $HOME/.TARGET`
+alias vim='vim -u $TARGET/.vimrc'
