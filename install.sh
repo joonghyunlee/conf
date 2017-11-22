@@ -1,9 +1,9 @@
 #!/bin/sh
 
-read -p "select a target directory: [Default $PWD]" TARGET
+read -p "select a target directory: [Default $HOME]" TARGET
 if [ -z "$TARGET" ]
 then
-    TARGET=$PWD
+    TARGET=$HOME
 fi
 
 echo $TARGET > $HOME/.TARGET
